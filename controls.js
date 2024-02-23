@@ -44,4 +44,4 @@ class Controls {
       console.table(this);
     }
   }
-}
+};
