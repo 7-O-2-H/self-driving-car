@@ -41,11 +41,15 @@ class Car {
     }
 
     // left and right
-    if (this.controls.left) {
-      this.angle += 0.03;
-    }
-    if (this.controls.right) {
-      this.angle -= 0.03;
+    if (this.speed != 0) {
+      // flip to adjust controls dependent of direction
+      const flip = this.speed > 0 ? 1 : -1;
+      if (this.controls.left) {
+        this.angle += 0.03 * flip;
+      }
+      if (this.controls.right) {
+        this.angle -= 0.03 * flip;
+      }
     }
     this.x -= Math.sin(this.angle) * this.speed;
     this.y -= Math.cos(this.angle) * this.speed;
