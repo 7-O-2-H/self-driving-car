@@ -13,4 +13,4 @@ function animate() {
   road.draw(ctx);
   car.draw(ctx);
   requestAnimationFrame(animate);
-}
+};
