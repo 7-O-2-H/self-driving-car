@@ -33,7 +33,6 @@ class Sensor {
       };
   
       this.rays.push([start, end]);
-      }
     }
   }
 
