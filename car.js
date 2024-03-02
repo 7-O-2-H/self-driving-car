@@ -25,11 +25,12 @@ class Car {
   }
 
   #assessDamage(roadBorders) {
-    for (let i = 0; i < this.roadBorders.length; i++) {
+    for (let i = 0; i < roadBorders.length; i++) {
       if (polysIntersect(this.polygon, roadBorders[i])) {
         return true;
       }
     }
+    return false;
   }
 
   #createPolygon() {
@@ -37,8 +38,8 @@ class Car {
     const rad = Math.hypot(this.width, this.height) / 2;
     const alpha = Math.atan2(this.width, this.height);
     points.push({
-      x: this.x - Math.sin(this.angle - alpha) * rad,
-      y: this.y - Math.cos(this.angle - alpha) * rad
+      x: this.x - Math.sin(this.angle - alpha) * rad * 3,
+      y: this.y - Math.cos(this.angle - alpha) * rad * 3
     });
     points.push({
       x: this.x - Math.sin(this.angle + alpha) * rad,
@@ -46,11 +47,11 @@ class Car {
     });
     points.push({
       x: this.x - Math.sin(Math.PI + this.angle - alpha) * rad,
-      y: this.y - Math.cos(ath.PI + this.angle - alpha) * rad
+      y: this.y - Math.cos(Math.PI + this.angle - alpha) * rad
     });
     points.push({
       x: this.x - Math.sin(Math.PI + this.angle + alpha) * rad,
-      y: this.y - Math.cos(ath.PI + this.angle + alpha) * rad
+      y: this.y - Math.cos(Math.PI + this.angle + alpha) * rad
     });
     return points;
   }
@@ -95,10 +96,15 @@ class Car {
   }
 
   draw(ctx) {
+    if (this.damaged) {
+      ctx.fillStyle = "gray";
+    } else {
+      ctx.fillStyle = "black";
+    }
     ctx.beginPath();
     ctx.moveTo(this.polygon[0].x, this.polygon[0].y);
-    for (let i = 0; i < this.polygon.length; i++) {
-      ctx.lineto(this.polygon[i].x, this.polygon[i].y);
+    for (let i = 1; i < this.polygon.length; i++) {
+      ctx.lineTo(this.polygon[i].x, this.polygon[i].y);
     }
     ctx.fill();
 
