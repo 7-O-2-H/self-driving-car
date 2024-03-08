@@ -138,7 +138,7 @@ class Car {
     }
     ctx.fill();
 
-    if (this.sensor, drawSensor) {
+    if (this.sensor && drawSensor) {
       this.sensor.draw(ctx);
     }
   }
