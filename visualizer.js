@@ -28,7 +28,7 @@ class Visualizer {
     }
   }
 
-  static drawLevel(ctx,level,left,top,width,height,outputLabels){
+  static drawLevel(ctx, level, left, top, width, height, outputLabels){
     const right = left + width;
     const bottom = top + height;
 
