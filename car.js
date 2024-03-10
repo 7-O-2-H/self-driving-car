@@ -5,6 +5,9 @@ class Car {
     this.width = width;
     this.height = height;
 
+    this.image = new Image();
+    this.image.src = "car.png";
+
     // controls
     this.speed = 0;
     this.acceleration = 0.2;
@@ -134,9 +137,11 @@ class Car {
     ctx.beginPath();
     ctx.moveTo(this.polygon[0].x, this.polygon[0].y);
     for (let i = 1; i < this.polygon.length; i++) {
+         ctx.drawImage(this.image, -this.width / 2, -this.height / 2)
       ctx.lineTo(this.polygon[i].x, this.polygon[i].y);
     }
     ctx.fill();
+    // for (let i = 1; i < this.polygon.length; i++) {
 
     if (this.sensor && drawSensor) {
       this.sensor.draw(ctx);
