@@ -137,8 +137,10 @@ class Car {
     ctx.beginPath();
     ctx.moveTo(this.polygon[0].x, this.polygon[0].y);
     for (let i = 1; i < this.polygon.length; i++) {
-      ctx.drawImage(this.image, this.polygon[i].x, this.polygon[i].y);
-      // ctx.lineTo(this.polygon[i].x, this.polygon[i].y);
+      ctx.drawImage(this.image, this.polygon[0].x - this.width, this.polygon[0].y);
+      ctx.fillStyle = "blue";
+      ctx.fill();
+      //ctx.lineTo(this.polygon[i].x, this.polygon[i].y);
     }
     ctx.fill();
 
