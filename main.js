@@ -69,7 +69,7 @@ function animate(time) {
   carCtx.translate(0, -bestCar.y + carCanvas.height * 0.7);
 
   road.draw(carCtx);
-  carCtx.globalAlpha = 0.2;
+  carCtx.globalAlpha = 0.5;
   for (let i = 0; i < traffic.length; i++) {
     traffic[i].draw(carCtx, "red");
   }  
