@@ -15,8 +15,7 @@ This application was built to explore neural networks. By using a 2 model of a r
 ## Screenshots
 
   Road:
-
-
-
+    
+    ![https://github.com/7-O-2-H/self-driving-car/blob/main/docs/Neural%20Visualizer.png]
 
   Visializer:
