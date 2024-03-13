@@ -15,8 +15,9 @@ This application was built to explore neural networks. By using a 2 model of a r
 ## Screenshots
 
   Road
-
+<img height="300" src="https://picsum.photos/460/300">
   <p align="center">
+    <img width="460" height="300" src="https://github.com/7-O-2-H/self-driving-car/blob/main/docs/Road.png">
   !["Screen of Road](https://github.com/7-O-2-H/self-driving-car/blob/main/docs/Road.png)
   </p>
     
