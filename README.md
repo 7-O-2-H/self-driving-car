@@ -15,15 +15,16 @@ This application was built to explore neural networks. By using a 2 model of a r
 ## Screenshots
 
   Road
-<img height="300" src="https://picsum.photos/460/300">
-  <p align="center">
-    <img width="460" height="300" src="https://github.com/7-O-2-H/self-driving-car/blob/main/docs/Road.png">
+
   !["Screen of Road](https://github.com/7-O-2-H/self-driving-car/blob/main/docs/Road.png)
-  </p>
+
     
 
   Visializer:
 
-  <p align="center">
   !["Screen of viz"](https://github.com/7-O-2-H/self-driving-car/blob/main/docs/Neural%20Visualizer.png)
-  </p>
+
+
+### Notes
+
+This project was built in part using this project guide: https://github.com/gniziemazity/self-driving-car
