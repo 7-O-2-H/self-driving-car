@@ -16,10 +16,13 @@ This application was built to explore neural networks. By using a 2 model of a r
 
   Road
 
+  <p align="center">
   !["Screen of Road](https://github.com/7-O-2-H/self-driving-car/blob/main/docs/Road.png)
+  </p>
     
 
   Visializer:
 
+  <p align="center">
   !["Screen of viz"](https://github.com/7-O-2-H/self-driving-car/blob/main/docs/Neural%20Visualizer.png)
-  
+  </p>
