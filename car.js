@@ -40,7 +40,6 @@ class Car {
       this.sensor.update(roadBorders, traffic);
       const offsets = this.sensor.readings.map(s => s === null ? 0 : 1 - s.offset);
       const outputs = NeuralNetwork.feedForward(offsets, this.brain);
-      // console.log(outputs);
 
       if (this.useBrain) {
         this.controls.forward = outputs[0];
@@ -138,8 +137,6 @@ class Car {
     ctx.moveTo(this.polygon[0].x, this.polygon[0].y);
     for (let i = 1; i < this.polygon.length; i++) {
       ctx.lineTo(this.polygon[i].x, this.polygon[i].y);
-      //This line draws the vehicle png over the polygon representation of the vehicles
-      //ctx.drawImage(this.image, this.polygon[0].x - this.width, this.polygon[0].y);
     }
     ctx.fill();
 
